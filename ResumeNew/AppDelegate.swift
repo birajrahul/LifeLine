@@ -1,12 +1,20 @@
-//
-//  AppDelegate.swift
-//  ResumeNew
-//
-//  Created by Tanuj Nayanam on 11/15/15.
-//  Copyright © 2015 Tanuj Nayanam. All rights reserved.
-//
+//************************************************************************//
+//                                                                        //
+//     File Name:     AppDelegateViewController.swift                     //
+//     App Name:      LifeLine                                            //
+//     Created by     Tanuj Nayanam, Rahul Biraj on 11/23/15.             //
+//     Copyright ©    2015 Tanuj Nayanam, Rahul Biraj All rights reserved.//
+//     Course Name:   Mobile Applicaton Programming                       //
+//     CourseCode:    CSE - 651 FALL 2015                                 //
+//     Language:      Swift 2.1                                           //
+//     Tools:         Xcode Version 7.0.1                                 //
+//     DevelopedOn:   OS X Yosemite 10.10.5                               //
+//     Device Suport: IPhones                                             //
+//                                                                        //
+//************************************************************************//
 
 import UIKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("K2ynXXdFLdiJgEa4nsF5o7eMyD4A0Kd3ePeAMLq6",
+            clientKey: "ndq4pNY8VmyUQz84oks5BbDXxejwPg8qmvAWJs0i")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
         return true
     }
 
